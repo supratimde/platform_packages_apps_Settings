@@ -85,4 +85,7 @@
     <!-- Themes customisation -->
     <string name="theme_customization_systemui_title">Color bucket</string>
 
+    <!-- Advanced powermenu -->
+    <string name="global_actions_title">Power menu</string>
+
 </resources>
