@@ -35,21 +35,28 @@ public class OosAboutPreference extends Preference {
     private static void setInfo(String prop, TextView textview) {
         if (TextUtils.isEmpty(getSystemProperty(prop))) {
             textview.setText("Unknown");
-        } else {
-            if (prop.equals("ro.processor.model")) {
-                String model = getSystemProperty(prop);
-                model = model.replace("_", " ");
-                textview.setText(model);
-            } else {
-                textview.setText(getSystemProperty(prop));
-            }
+	} else {
+            if (prop.equals("ro.octavi.maintainer")) {
+	        String str = getSystemProperty(prop);
+		if (str.contains("_"))
+                    str = str.replace("_", " ");
+		textview.setText(str);
+	    }
+            textview.setText(getSystemProperty(prop));
         }
     }
 
     private static void setInfo(String prop, String prop2, TextView textview) {
         if (TextUtils.isEmpty(getSystemProperty(prop))) {
             textview.setText("Unknown");
-        } else {
+        } if (!TextUtils.isEmpty(getSystemProperty(prop2)) && !TextUtils.isEmpty(getSystemProperty(prop))) {
+            if (prop2.equals("ro.processor.model")) {
+                String model = getSystemProperty(prop2);
+                if (model.contains("_"))
+                model = model.replace("_", " ");
+                textview.setText(getSystemProperty(prop)+" coupled with "+model);
+	    } else textview.setText("Unknown");
+	} else {
             textview.setText(String.format("v%s %s", getSystemProperty(prop), getSystemProperty(prop2)));
         }
     }
@@ -68,7 +75,7 @@ public class OosAboutPreference extends Preference {
         TextView octStage = holder.itemView.findViewById(R.id.octavi_stage);
         TextView octMaintainer = holder.itemView.findViewById(R.id.octavi_maintainer);
 
-        setInfo("ro.product.model", deviceName);
+        setInfo("ro.product.model", "ro.processor.model", deviceName);
         setInfo("ro.octavi.status", "ro.octavi.branding.version", octStage);
         setInfo("ro.octavi.maintainer", octMaintainer);
 
