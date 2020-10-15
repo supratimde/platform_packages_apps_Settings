@@ -47,15 +47,8 @@ public class OosAboutPreference extends Preference {
     }
 
     private static void setInfo(String prop, String prop2, TextView textview) {
-        if (TextUtils.isEmpty(getSystemProperty(prop))) {
+        if (TextUtils.isEmpty(getSystemProperty(prop)) && TextUtils.isEmpty(getSystemProperty(prop2))) {
             textview.setText("Unknown");
-        } if (!TextUtils.isEmpty(getSystemProperty(prop2)) && !TextUtils.isEmpty(getSystemProperty(prop))) {
-            if (prop2.equals("ro.processor.model")) {
-                String model = getSystemProperty(prop2);
-                if (model.contains("_"))
-                model = model.replace("_", " ");
-                textview.setText(getSystemProperty(prop)+" coupled with "+model);
-	    } else textview.setText("Unknown");
 	} else {
             textview.setText(String.format("v%s %s", getSystemProperty(prop), getSystemProperty(prop2)));
         }
@@ -75,11 +68,20 @@ public class OosAboutPreference extends Preference {
         TextView octStage = holder.itemView.findViewById(R.id.octavi_stage);
         TextView octMaintainer = holder.itemView.findViewById(R.id.octavi_maintainer);
 
-        setInfo("ro.product.model", "ro.processor.model", deviceName);
+        setInfo("ro.product.model", deviceName);
         setInfo("ro.octavi.status", "ro.octavi.branding.version", octStage);
         setInfo("ro.octavi.maintainer", octMaintainer);
 
-        switch (getSystemProperty("ro.product.system.name")) {
+        switch (getSystemProperty("ro.product.device").toLowerCase()) {
+            case "x00td":
+                deviceIcon.setImageResource(R.drawable.ic_device_x00td);
+                break;
+            case "violet":
+                deviceIcon.setImageResource(R.drawable.ic_device_violet);
+                break;
+            case "rmx1801":
+                deviceIcon.setImageResource(R.drawable.ic_device_rmx1801);
+                break;
             case "mido":
                 deviceIcon.setImageResource(R.drawable.ic_device_mido);
                 break;
