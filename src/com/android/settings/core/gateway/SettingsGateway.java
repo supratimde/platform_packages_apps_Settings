@@ -162,6 +162,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.octavi.lab.OctaviLab;
 import com.octavi.lab.fragments.PowermenuSettings;
+import com.octavi.lab.OmniJawsSettings;
 
 public class SettingsGateway {
 
@@ -312,7 +313,8 @@ public class SettingsGateway {
             InteractAcrossProfilesDetails.class.getName(),
             MediaControlsSettings.class.getName(),
             OctaviLab.class.getName(),
-            PowermenuSettings.class.getName()
+            PowermenuSettings.class.getName(),
+            OmniJawsSettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -354,5 +356,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.OctaviLabActivity.class.getName(),
             Settings.PowermenuSettingsActivity.class.getName(),
+            Settings.OmniJawsSettingsActivity.class.getName(),
     };
 }
