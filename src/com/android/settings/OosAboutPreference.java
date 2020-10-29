@@ -100,6 +100,9 @@ public class OosAboutPreference extends Preference {
             case "tissot":
                 deviceIcon.setImageResource(R.drawable.ic_device_tissot);
                 break;
+	    case "ginkgo":
+		deviceIcon.setImageResource(R.drawable.ic_device_ginkgo);
+		break;
             case "whyred":
                 deviceIcon.setImageResource(R.drawable.ic_device_whyred);
                 break;
