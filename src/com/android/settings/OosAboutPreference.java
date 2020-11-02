@@ -112,6 +112,9 @@ public class OosAboutPreference extends Preference {
             case "raphael":
                 deviceIcon.setImageResource(R.drawable.ic_device_raphael);
                 break;
+           case "raphaelin":
+                deviceIcon.setImageResource(R.drawable.ic_device_raphael);
+                break;
             case "beryllium":
                 deviceIcon.setImageResource(R.drawable.ic_device_beryllium);
                 break;
