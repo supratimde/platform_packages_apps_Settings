@@ -100,9 +100,9 @@ public class OosAboutPreference extends Preference {
             case "tissot":
                 deviceIcon.setImageResource(R.drawable.ic_device_tissot);
                 break;
-	        case "ginkgo":
-		        deviceIcon.setImageResource(R.drawable.ic_device_ginkgo);
-		        break;
+	    case "ginkgo":
+		deviceIcon.setImageResource(R.drawable.ic_device_ginkgo);
+		break;
             case "whyred":
                 deviceIcon.setImageResource(R.drawable.ic_device_whyred);
                 break;
@@ -119,11 +119,14 @@ public class OosAboutPreference extends Preference {
                 deviceIcon.setImageResource(R.drawable.ic_device_beryllium);
                 break;
             case "davinci":
-		        deviceIcon.setImageResource(R.drawable.ic_device_ginkgo);
-		        break;
+		deviceIcon.setImageResource(R.drawable.ic_device_davinci);
+		break;
+	    case "davinciin":
+                deviceIcon.setImageResource(R.drawable.ic_device_davinci);
+                break;
 	    case "miatoll":
-                        deviceIcon.setImageResource(R.drawable.ic_device_miatoll);
-                        break;
+                deviceIcon.setImageResource(R.drawable.ic_device_miatoll);
+                break;
             default:
 		deviceIcon.setImageResource(R.drawable.ic_default_device);
                 break;
