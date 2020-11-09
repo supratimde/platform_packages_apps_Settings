@@ -124,6 +124,9 @@ public class OosAboutPreference extends Preference {
 	    case "davinciin":
                 deviceIcon.setImageResource(R.drawable.ic_device_davinci);
                 break;
+            case "surya":
+                deviceIcon.setImageResource(R.drawable.ic_device_surya);
+                break;
 	    case "miatoll":
                 deviceIcon.setImageResource(R.drawable.ic_device_miatoll);
                 break;
