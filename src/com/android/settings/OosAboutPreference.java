@@ -130,6 +130,9 @@ public class OosAboutPreference extends Preference {
 	    case "miatoll":
                 deviceIcon.setImageResource(R.drawable.ic_device_miatoll);
                 break;
+	    case "ysl":
+                deviceIcon.setImageResource(R.drawable.ic_device_ysl);
+                break;
             default:
 		deviceIcon.setImageResource(R.drawable.ic_default_device);
                 break;
