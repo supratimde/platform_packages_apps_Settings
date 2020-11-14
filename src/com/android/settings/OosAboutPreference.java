@@ -94,6 +94,9 @@ public class OosAboutPreference extends Preference {
             case "mido":
                 deviceIcon.setImageResource(R.drawable.ic_device_mido);
                 break;
+            case "phoenix":
+                deviceIcon.setImageResource(R.drawable.ic_device_phoenix);
+                break;
             case "sanders":
                 deviceIcon.setImageResource(R.drawable.ic_device_sanders);
                 break;
