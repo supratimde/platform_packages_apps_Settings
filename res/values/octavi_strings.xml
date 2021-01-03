@@ -82,9 +82,6 @@
     <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
     <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
 
-    <!-- Themes customisation -->
-    <string name="theme_customization_systemui_title">Color bucket</string>
-
     <!-- Advanced powermenu -->
     <string name="global_actions_title">Power menu</string>
 
