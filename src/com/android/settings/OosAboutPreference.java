@@ -34,7 +34,7 @@ public class OosAboutPreference extends Preference {
 
     private static void setInfo(String prop, TextView textview) {
         if (TextUtils.isEmpty(getSystemProperty(prop))) {
-            textview.setText("Unknown");
+            textview.setText("SupratimDey");
 	} else {
             if (prop.equals("ro.octavi.maintainer")) {
 	        String str = getSystemProperty(prop);
@@ -48,7 +48,7 @@ public class OosAboutPreference extends Preference {
 
     private static void setInfo(String prop, String prop2, TextView textview) {
         if (TextUtils.isEmpty(getSystemProperty(prop)) && TextUtils.isEmpty(getSystemProperty(prop2))) {
-            textview.setText("Unknown");
+            textview.setText("OctaviOs v1.5");
 	} else {
             textview.setText(String.format("v%s %s", getSystemProperty(prop), getSystemProperty(prop2)));
         }
@@ -88,8 +88,8 @@ public class OosAboutPreference extends Preference {
             case "rmx1901":
                 deviceIcon.setImageResource(R.drawable.ic_device_rmx1901);
                 break;
-            case "rmx1801":
-                deviceIcon.setImageResource(R.drawable.ic_device_rmx1801);
+            case "rmx1851":
+                deviceIcon.setImageResource(R.drawable.ic_device_rmx1851);
                 break;
             case "mido":
                 deviceIcon.setImageResource(R.drawable.ic_device_mido);
